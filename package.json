@@ -1,10 +1,13 @@
 {
   "private": true,
+  "homepage": "https://danielins.github.io",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "next": "latest",
@@ -15,6 +18,7 @@
     "@types/node": "^12.12.21",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",
+    "gh-pages": "^4.0.0",
     "postcss-preset-env": "^7.8.3",
     "tailwindcss": "^3.2.4",
     "typescript": "^4.8.3"
