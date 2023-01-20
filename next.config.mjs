@@ -1,3 +1,5 @@
+/** @type { import('next').nextConfig } */
+
 const nextConfig = {
   images: {
     loader: 'akamai',
