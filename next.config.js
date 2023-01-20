@@ -7,7 +7,7 @@ const nextConfig = {
     path: '',
   },
   basePath: '/danielins.github.io',
-  assetPrefix: './danielins.github.io'
+  assetPrefix: '/danielins.github.io/'
 }
 
 module.exports = nextConfig;
