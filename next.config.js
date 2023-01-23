@@ -1,14 +1,6 @@
-const isGitHubActions = process.env.GITHUB_ACTIONS || false
-
-let assetPrefix = ''
-let basePath = '/'
-
-if ( isGitHubActions ) {
-  const repo = process.env.GITHUB_ACTIONS.replace(/.*?\//, '')
-
-  assetPrefix = `/${repo}/`
-  basePath = `/${repo}`
-}
+const repo = 'danielins.github.io'
+const assetPrefix = `/${repo}/`
+const basePath = `/${repo}`
 
 const nextConfig = {
   images: {
