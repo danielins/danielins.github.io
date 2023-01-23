@@ -1,13 +1,22 @@
-/** @type { import('next').nextConfig } */
+const isGitHubActions = process.env.GITHUB_ACTIONS || false
+
+let assetPrefix = ''
+let basePath = '/'
+
+if ( isGitHubActions ) {
+  const repo = process.env.GITHUB_ACTIONS.replace(/.*?\//, '')
+
+  assetPrefix = `/${repo}/`
+  basePath = `/${repo}`
+}
 
 const nextConfig = {
-  reactStrictMode: true,
   images: {
     loader: 'akamai',
     path: '',
   },
-  basePath: '/danielins.github.io',
-  assetPrefix: '/danielins.github.io/'
+  basePath: basePath,
+  assetPrefix: assetPrefix
 }
 
 module.exports = nextConfig;
